@@ -8,7 +8,7 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
      <?php $__env->slot('header', null, []); ?> 
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="mx-auto font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             <?php echo e(__('Dashboard')); ?>
 
         </h2>
