@@ -15,7 +15,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders=Order::orderBy('created_at','desc')->get();
+        return view('order.index', compact('orders'));
     }
 
     /**
@@ -42,8 +43,9 @@ class OrderController extends Controller
         $order->url=$request->url;
         $order->estimated=$request->estimated;
         $order->price=$request->price;
-        $order->paid=0;
-        $order->arrived=0;
+        $order->paid=$request->paid;
+        $order->status=$request->status;
+        $order->note=$request->note;
         $order->save();
         return redirect()->route('order.index');
     }
@@ -67,7 +69,7 @@ class OrderController extends Controller
      */
     public function edit(Order $order)
     {
-        //
+        return view('order.edit', compact('order'));
     }
 
     /**

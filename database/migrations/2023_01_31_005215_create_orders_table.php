@@ -25,7 +25,8 @@ return new class extends Migration
             $table->integer("price");
             $table->text("url")->nullable();
             $table->boolean("paid");
-            $table->boolean("arrived");
+            $table->text("status");
+            $table->text("note");
         });
     }
 

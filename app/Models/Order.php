@@ -12,7 +12,10 @@ class Order extends Model
         'customer',
         'products',
         'url',
-        'estimted',
+        'estimated',
         'price',
+        'paid',
+        'status',
+        'note',
     ];
 }
