@@ -26,7 +26,7 @@ return new class extends Migration
             $table->text("url")->nullable();
             $table->boolean("paid");
             $table->text("status");
-            $table->text("note");
+            $table->text("note")->nullable();
         });
     }
 

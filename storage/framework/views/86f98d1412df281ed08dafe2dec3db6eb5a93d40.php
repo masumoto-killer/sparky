@@ -38,7 +38,7 @@
             </div>
             <div>
                 <label for="price">Price</label>
-                <input type="number" name="price" id="price" step="10" required 
+                <input type="number" name="price" id="price" step="10" 
                 class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
                 k VND
             </div>

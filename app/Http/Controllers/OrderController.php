@@ -81,7 +81,16 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
-        //
+        $order->customer=$request->customer;
+        $order->products=$request->products;
+        $order->url=$request->url;
+        $order->estimated=$request->estimated;
+        $order->price=$request->price;
+        $order->paid=$request->paid;
+        $order->status=$request->status;
+        $order->note=$request->note;
+        $order->save();
+        return redirect()->route('order.index');
     }
 
     /**
@@ -92,6 +101,7 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
+        $order->delete();
+        return redirect()->route('order.index');
     }
 }

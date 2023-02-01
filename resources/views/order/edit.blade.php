@@ -5,16 +5,17 @@
         </h2>
     </x-slot>
 
-    <form method="post" action="{{route('order.store')}}"
+    <form method="post" action="{{route('order.update',$order)}}"
     class="w-1/2 container flex flex-col mx-auto text-gray-800 dark:text-gray-200">
     @csrf
+    @method('patch')
             <label for="customer" class="font-semibold leading-none mt-4">Customer</label>
             <input type="text" name="customer" id="customer" value="{{old('customer',$order->customer)}}" required 
             class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
         <br>
             <label for="products" class="font-semibold leading-none mt-4">Products</label>
             <textarea name="products" id="products" rows="3" required 
-            class="w-auto border border-gray-300 rounded-lg text-gray-800">{{old('products')}}</textarea>
+            class="w-auto border border-gray-300 rounded-lg text-gray-800">{{old('products',$order->products)}}</textarea>
         <br>
             <label for="url" class="font-semibold leading-none mt-4">Link</label>
             <input id="url" type="url" name="url" value="{{old('url',$order->url)}}"
@@ -74,8 +75,14 @@
 
         </div>
         <br>
-        <x-primary-button class="mt-4 mx-auto">
-            Create
-        </x-primary-button>
+        <div class="flex justify-around">
+            <x-primary-button class="mt-4 mx-auto">Save</x-primary-button>
+            <form method="post" action="{{route('order.destroy', $order)}}">
+                @csrf
+                @method('delete')
+                <x-danger-button class="mt-4 mx-auto bg-red-500" onClick="return confirm('Delete this order?');">
+                    Delete</x-danger-button>
+            </form>
+        </div>
     </form>
 </x-app-layout>
