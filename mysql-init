@@ -1,0 +1,2 @@
+cat >> mysql-init
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
