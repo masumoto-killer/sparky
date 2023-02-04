@@ -20,15 +20,12 @@
             <label for="customer" class="font-semibold leading-none mt-4">Customer</label>
             <input type="text" name="customer" id="customer" value="<?php echo e(old('customer',$order->customer)); ?>" required 
             class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
-        <br>
             <label for="products" class="font-semibold leading-none mt-4">Products</label>
             <textarea name="products" id="products" rows="3" required 
             class="w-auto border border-gray-300 rounded-lg text-gray-800"><?php echo e(old('products',$order->products)); ?></textarea>
-        <br>
             <label for="url" class="font-semibold leading-none mt-4">Link</label>
             <input id="url" type="url" name="url" value="<?php echo e(old('url',$order->url)); ?>"
             class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
-        <br>
         <label for="note" class="font-semibold leading-none mt-4">Note</label>
             <input type="text" name="note" id="note" value="<?php echo e(old('note',$order->note)); ?>"
             class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
@@ -80,44 +77,41 @@
                 class="w-10 py-2 border border-gray-300 rounded-lg"
                 <?php if($order->status == 'Arrived') echo 'checked'?>>
             </div>
-
         </div>
-        <br>
-        <div class="flex justify-around">
-            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.primary-button','data' => ['class' => 'mt-4 mx-auto']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.primary-button','data' => ['class' => 'mt-4 px-16 mx-auto ']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('primary-button'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['class' => 'mt-4 mx-auto']); ?>Save <?php echo $__env->renderComponent(); ?>
+<?php $component->withAttributes(['class' => 'mt-4 px-16 mx-auto ']); ?>Save <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-            <form method="post" action="<?php echo e(route('order.destroy', $order)); ?>">
-                <?php echo csrf_field(); ?>
-                <?php echo method_field('delete'); ?>
-                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.danger-button','data' => ['class' => 'mt-4 mx-auto bg-red-500','onClick' => 'return confirm(\'Delete this order?\');']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+    </form>
+    <form method="post" action="<?php echo e(route('order.destroy', $order)); ?>"
+    class="flex flex-col mx-auto">
+        <?php echo csrf_field(); ?>
+        <?php echo method_field('delete'); ?>
+        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.danger-button','data' => ['class' => 'mt-4 px-14 mx-auto','onClick' => 'return confirm(\'Delete this order?\');']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('danger-button'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['class' => 'mt-4 mx-auto bg-red-500','onClick' => 'return confirm(\'Delete this order?\');']); ?>
-                    Delete <?php echo $__env->renderComponent(); ?>
+<?php $component->withAttributes(['class' => 'mt-4 px-14 mx-auto','onClick' => 'return confirm(\'Delete this order?\');']); ?>
+            Delete <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-            </form>
-        </div>
     </form>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

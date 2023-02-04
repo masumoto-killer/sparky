@@ -11,14 +11,11 @@
             <label for="customer" class="font-semibold leading-none mt-4">Customer</label>
             <input type="text" name="customer" id="customer" required 
             class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
-        <br>
             <label for="products" class="font-semibold leading-none mt-4">Products</label>
             <textarea name="products" id="products" rows="3" required 
             class="w-auto border border-gray-300 rounded-lg text-gray-800"></textarea>
-        <br>
             <label for="url" class="font-semibold leading-none mt-4">Link</label>
             <input id="url" type="url" name="url" class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
-        <br>
         <label for="note" class="font-semibold leading-none mt-4">Note</label>
             <input type="text" name="note" id="note"  
             class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
@@ -59,8 +56,7 @@
                 class="w-10 py-2 border border-gray-300 rounded-lg">
             </div>
         </div>
-        <br>
-        <x-primary-button class="mt-4 mx-auto">
+        <x-primary-button class="mt-4 px-14 mx-auto">
             Create
         </x-primary-button>
     </form>

@@ -19,14 +19,11 @@
             <label for="customer" class="font-semibold leading-none mt-4">Customer</label>
             <input type="text" name="customer" id="customer" required 
             class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
-        <br>
             <label for="products" class="font-semibold leading-none mt-4">Products</label>
             <textarea name="products" id="products" rows="3" required 
             class="w-auto border border-gray-300 rounded-lg text-gray-800"></textarea>
-        <br>
             <label for="url" class="font-semibold leading-none mt-4">Link</label>
             <input id="url" type="url" name="url" class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
-        <br>
         <label for="note" class="font-semibold leading-none mt-4">Note</label>
             <input type="text" name="note" id="note"  
             class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
@@ -67,16 +64,15 @@
                 class="w-10 py-2 border border-gray-300 rounded-lg">
             </div>
         </div>
-        <br>
         <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.primary-button','data' => ['class' => 'mt-4 mx-auto']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.primary-button','data' => ['class' => 'mt-4 px-14 mx-auto']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('primary-button'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['class' => 'mt-4 mx-auto']); ?>
+<?php $component->withAttributes(['class' => 'mt-4 px-14 mx-auto']); ?>
             Create
          <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

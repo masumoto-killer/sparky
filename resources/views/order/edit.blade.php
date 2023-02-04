@@ -12,15 +12,12 @@
             <label for="customer" class="font-semibold leading-none mt-4">Customer</label>
             <input type="text" name="customer" id="customer" value="{{old('customer',$order->customer)}}" required 
             class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
-        <br>
             <label for="products" class="font-semibold leading-none mt-4">Products</label>
             <textarea name="products" id="products" rows="3" required 
             class="w-auto border border-gray-300 rounded-lg text-gray-800">{{old('products',$order->products)}}</textarea>
-        <br>
             <label for="url" class="font-semibold leading-none mt-4">Link</label>
             <input id="url" type="url" name="url" value="{{old('url',$order->url)}}"
             class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
-        <br>
         <label for="note" class="font-semibold leading-none mt-4">Note</label>
             <input type="text" name="note" id="note" value="{{old('note',$order->note)}}"
             class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
@@ -72,17 +69,14 @@
                 class="w-10 py-2 border border-gray-300 rounded-lg"
                 <?php if($order->status == 'Arrived') echo 'checked'?>>
             </div>
-
         </div>
-        <br>
-        <div class="flex justify-around">
-            <x-primary-button class="mt-4 mx-auto">Save</x-primary-button>
-            <form method="post" action="{{route('order.destroy', $order)}}">
-                @csrf
-                @method('delete')
-                <x-danger-button class="mt-4 mx-auto bg-red-500" onClick="return confirm('Delete this order?');">
-                    Delete</x-danger-button>
-            </form>
-        </div>
+        <x-primary-button class="mt-4 px-16 mx-auto ">Save</x-primary-button>
+    </form>
+    <form method="post" action="{{route('order.destroy', $order)}}"
+    class="flex flex-col mx-auto">
+        @csrf
+        @method('delete')
+        <x-danger-button class="mt-4 px-14 mx-auto" onClick="return confirm('Delete this order?');">
+            Delete</x-danger-button>
     </form>
 </x-app-layout>
