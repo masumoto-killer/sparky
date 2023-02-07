@@ -38,7 +38,8 @@
                 <th class="font-light"><?php echo e($date); ?></th>
                 <th class="font-light"><?php echo e($order->customer); ?></th>
                 <th class="font-light"><?php echo e($order->products); ?></th>
-                <th><a href="<?php echo e($order->url); ?>" class="text-blue-400 font-extralight"><?php echo e($order->url); ?></a></th>
+                <th><a href="<?php echo e($order->url); ?>" target="_blank" rel="noopener noreferrer"
+                class="text-blue-400 font-extralight"><?php echo e($order->url); ?></a></th>
                 <th class="font-light"><?php echo e($estimated=date('d-m-Y',strtotime($order->estimated))); ?></th>
                 <th class="font-light"><?php echo e($order->price); ?>.000</th>
                 <th class="font-light"><input type="checkbox" name="paid" id="paid" value="1" 

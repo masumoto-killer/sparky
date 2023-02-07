@@ -30,7 +30,8 @@
                 <th class="font-light">{{ $date }}</th>
                 <th class="font-light">{{ $order->customer }}</th>
                 <th class="font-light">{{ $order->products }}</th>
-                <th><a href="{{$order->url}}" class="text-blue-400 font-extralight">{{ $order->url }}</a></th>
+                <th><a href="{{$order->url}}" target="_blank" rel="noopener noreferrer"
+                class="text-blue-400 font-extralight">{{ $order->url }}</a></th>
                 <th class="font-light">{{ $estimated=date('d-m-Y',strtotime($order->estimated)) }}</th>
                 <th class="font-light">{{ $order->price }}.000</th>
                 <th class="font-light"><input type="checkbox" name="paid" id="paid" value="1" 
