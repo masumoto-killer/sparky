@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '1f920693329f614fa4cd8e5f773b6206ab204ea8',
+        'reference' => '52e399a8cf2eb83d6756e1acd3a26b06858dfeb2',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => false,
         ),
         'aws/aws-sdk-php' => array(
-            'pretty_version' => '3.258.3',
-            'version' => '3.258.3.0',
-            'reference' => '57cbc06827148d0d4d3f5dbe4b948daa20f82d70',
+            'pretty_version' => '3.258.4',
+            'version' => '3.258.4.0',
+            'reference' => 'c20d674f502ed96ed0de63e9da087eb5f0e95590',
             'type' => 'library',
             'install_path' => __DIR__ . '/../aws/aws-sdk-php',
             'aliases' => array(),
@@ -394,7 +394,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '1f920693329f614fa4cd8e5f773b6206ab204ea8',
+            'reference' => '52e399a8cf2eb83d6756e1acd3a26b06858dfeb2',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -491,9 +491,9 @@
             'dev_requirement' => true,
         ),
         'monolog/monolog' => array(
-            'pretty_version' => '2.8.0',
-            'version' => '2.8.0.0',
-            'reference' => '720488632c590286b88b80e62aa3d3d551ad4a50',
+            'pretty_version' => '2.9.1',
+            'version' => '2.9.1.0',
+            'reference' => 'f259e2b15fb95494c83f52d3caad003bbf5ffaa1',
             'type' => 'library',
             'install_path' => __DIR__ . '/../monolog/monolog',
             'aliases' => array(),
@@ -772,8 +772,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0.0 || 2.0.0 || 3.0.0',
-                1 => '1.0|2.0|3.0',
+                0 => '1.0|2.0|3.0',
+                1 => '1.0.0 || 2.0.0 || 3.0.0',
             ),
         ),
         'psr/simple-cache' => array(
