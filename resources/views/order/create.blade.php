@@ -27,7 +27,7 @@
             </div>
             <div>
                 <label for="price">Price</label>
-                <input type="number" name="price" id="price" step="10" 
+                <input type="number" name="price" id="price" step="10" required
                 class="w-auto py-2 border border-gray-300 rounded-lg text-gray-800">
                 k VND
             </div>
@@ -42,17 +42,17 @@
             </div>
             <div>
                 <label for="status" class="font-semibold leading-none mt-4">Pending</label>
-                <input id="pending" type="radio" name="status" value="Pending"
+                <input id="pending" type="radio" name="status" value="Pending" required
                 class="w-10 py-2 border border-gray-300 rounded-lg">
             </div>
             <div>
                 <label for="status" class="font-semibold leading-none mt-4">Purchased</label>
-                <input id="purchased" type="radio" name="status" value="Purchased"
+                <input id="purchased" type="radio" name="status" value="Purchased" required
                 class="w-10 py-2 border border-gray-300 rounded-lg">
             </div>
             <div>
                 <label for="in-stock" class="font-semibold leading-none mt-4">In-stock</label>
-                <input id="in-stock" type="radio" name="status" value="In-stock"
+                <input id="in-stock" type="radio" name="status" value="In-stock" required
                 class="w-10 py-2 border border-gray-300 rounded-lg">
             </div>
         </div>

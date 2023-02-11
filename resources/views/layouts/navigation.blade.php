@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('order.create')" :active="request()->routeIs('order.create')">
                         NEW
                     </x-nav-link>
+                    <x-nav-link :href="('phpMyAdmin')" target="_blank" rel="noopener noreferrer">
+                        phpMyAdmin
+                    </x-nav-link>
 
                 </div>
             </div>
